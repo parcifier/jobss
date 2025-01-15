@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Business Line</title>
+    <link rel="stylesheet" href="Personal/dashboard.html">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #4CAF50, #2a2a2a);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Added for responsiveness */
+            background-color: #333;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 5px 10px; /* Adjusted for smaller screens */
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        .get-started-container {
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 30px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .get-started-container h2 {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        .get-started-container p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .get-started-btn {
+            background-color: #FF5722;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .get-started-btn:hover {
+            background-color: #E64A19;
+        }
+        .section-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h2 {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .about-content, .services-content, .contact-content {
+            text-align: left;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .service-item {
+            background: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-details {
+            margin-top: 20px;
+        }
+        .contact-details p {
+            margin: 5px 0;
+        }
+        .contact-details a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .testimonials, .recruitment, .partnerships {
+            margin-top: 40px;
+        }
+        .testimonials blockquote {
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+            padding-left: 15px;
+        }
+        .recruitment, .partnerships {
+            text-align: center;
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .recruitment p, .partnerships p {
+            font-size: 1.1rem;
+            margin: 15px 0;
+        }
+        .recruitment a, .partnerships a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .recruitment a:hover, .partnerships a:hover {
+            background: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .get-started-container {
+                padding: 20px 15px;
+            }
+
+            .service-item {
+                padding: 10px;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .contact-details p, .recruitment p, .partnerships p {
+                font-size: 1rem;
+            }
+
+            .get-started-btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            nav a {
+                display: block;
+                text-align: center;
+                margin: 10px;
+                letter-spacing: normal;
+            }
+
+            .get-started-container h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-details p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Trust Business Line</h1>
+    <p>Your Partner in Business Excellence</p>
+</header>
+
+<nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Our Services</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#recruitment">Join Our Team</a>
+    <a href="#partnerships">Partnerships</a>
+</nav>
+
+<!-- Get Started Section -->
+<div class="get-started-container">
+    <h2>Get Started Today!</h2>
+    <p>Take the first step to transform your business with Trust Business Line.</p>
+    <button class="get-started-btn" onclick="window.location.href='careers.html';">Get Started</button>
+</div>
+
+<div class="section-container">
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+             <p>At Trust Business Line, we specialize in providing exceptional business solutions designed to meet the unique needs of every client. Our experienced team is committed to innovation, excellence, and delivering measurable results.</p>
+             <p>We strive to build enduring relationships with our clients based on trust, integrity, and mutual success. Let us be your trusted partner on the journey to achieving your business objectives.</p>
+             <p>We also believe in giving back to the community and promoting sustainable business practices. By working with us, you're not only achieving success but also making a positive impact on society.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Business Consulting</h3>
+                <p>Strategic planning and expert guidance to optimize operations and achieve your goals.</p>
+            </div>
+            <div class="service-item">
+                <h3>Financial Advisory</h3>
+                <p>Solutions to improve financial performance and maximize investment returns.</p>
+            </div>
+            <div class="service-item">
+                <h3>Marketing Solutions</h3>
+                <p>Innovative campaigns designed to enhance brand visibility and customer engagement.</p>
+            </div>
+            <div class="service-item">
+                <h3>Technology Integration</h3>
+                <p>Cutting-edge tools and systems to improve efficiency and streamline workflows.</p>
+            </div>
+            <div class="service-item">
+                <h3>Human Resources Management</h3>
+                <p>Comprehensive HR solutions to attract, retain, and develop top talent.</p>
+            </div>
+            <div class="service-item">
+                <h3>Custom Solutions</h3>
+                <p>Tailored strategies to meet the unique needs of your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials">
+            <blockquote>
+                "Working with Trust Business Line was a game-changer. Their insights on market trends were spot on!" - Emily Carter, CMO of Lumina Tech
+            </blockquote>
+            <blockquote>
+                "Thanks to Trust Business Line, we streamlined our operations and increased productivity by 30%. Amazing team!" - Michael Johnson, COO of Nova Logistics
+            </blockquote>
+            <blockquote>
+                "Their customer-first approach and innovative solutions helped us achieve our highest growth ever." - Sarah Lee, CEO of Horizon Retail Group
+            </blockquote>
+            <blockquote>
+                "Trust Business Line delivered beyond our expectations. Their expertise is unmatched!" - David Kim, Founder of Apex Innovations
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="recruitment">
+        <h2>Join Our Team</h2>
+        <p>Looking for an exciting career with a dynamic company? Trust Business Line is always looking for talented individuals to join our team. We value innovation, integrity, and a passion for excellence.</p>
+        <a href="careers.html">View Open Positions</a>
+    </section>
+
+    <section id="partnerships">
+        <h2>Partnerships</h2>
+        <p>We believe in the power of collaboration. Partner with us to create mutually beneficial relationships that drive success and innovation.</p>
+        <a href="partnerships.html">Learn More</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
+            <p>We’d love to hear from you! Reach out to us to discuss how we can support your business growth.</p>
+            <div class="contact-details">
+                <p><strong>Email:</strong> <a href="mailto:info@trustbusinessline.com">info@trustbusinessline.com</a></p>
+                <p><strong>Phone:</strong> +1 (425) 516-0511</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 Trust Business Line. All rights reserved. | Empowering Your Success</p>
+</footer>
+
+</body>
+</html>
